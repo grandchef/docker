@@ -18,7 +18,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Build the composer base image
+    - name: Build the docker base image
       run: |
         docker build kubectl --tag $IMAGE_NAME_KUBE
 
@@ -45,4 +45,4 @@ jobs:
 
         echo "Pushing image $IMAGE_ID:$VERSION-kubectl"
         docker tag $IMAGE_NAME_KUBE $IMAGE_ID:$VERSION-kubectl
-        docker push $IMAGE_ID:$VERSION
+        docker push $IMAGE_ID:$VERSION-kubectl
