@@ -1,4 +1,4 @@
-FROM docker:19.03
+FROM docker:23.0.1
 
 ENV PATH="/root/google-cloud-sdk/bin:${PATH}"
 
